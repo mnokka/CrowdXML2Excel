@@ -17,7 +17,7 @@ import xmltodict
 import xlsxwriter
 
 
-#hardcocde Atlassian Crowd 3.7.0 backup xml filename 
+#hardcoded Atlassian Crowd 3.7.0 backup xml filename 
 with open("backup.xml") as xml_file:
      
     data_dict = xmltodict.parse(xml_file.read())

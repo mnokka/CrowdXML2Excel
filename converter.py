@@ -1,5 +1,6 @@
 #
-# TODO DESC
+# Atlassian Crowd 3.7.0 backup file xml convertor
+# processses file and creted two excels needed to import data to another Crowd
 #
 # 26.4.2022 mika.nokka1@gmail.com
 
@@ -13,10 +14,8 @@ with open("backup.xml") as xml_file:
     data_dict = xmltodict.parse(xml_file.read())
     xml_file.close()
      
-for key,val in data_dict.items():
-    for val in data_dict[key]:
-        print ("key: {0}  value: {1}".format(key,val))
-        print ("----------------------------------------------------")
+
+UsernameToName={}
 
 # len works 
 len=(len(data_dict['crowd']['users']['user']))
@@ -29,6 +28,7 @@ for i in range(0,len):
     print (data_dict['crowd']['users']['user'][i]['lastName'])
     print (data_dict['crowd']['users']['user'][i]['email'])
     print (data_dict['crowd']['users']['user'][i]['credential'])
+    UsernmaeToName[]
     print (".....................................................................")
     
 
@@ -37,15 +37,14 @@ counter=0 #len did not work with membership subdictionary
 for i in data_dict['crowd']['memberships']['membership']:
     #print (i)
     counter = counter+1
-    #print ("----------------------------")
-#print (counter)    
-
-
+    #print ("----------------------------------------------------------------------")
+    
 for i in range(0,counter-1):
     print ("NUMBER:{0}".format(i))
     print (data_dict['crowd']['memberships']['membership'][i]['parentName'])
     print (data_dict['crowd']['memberships']['membership'][i]['childName'])    
-    print (".................")
+    print (".......................................................................")
 
 
-
+print ("User found:{0}".format(len))
+print ("Directory memberships found:{0}".format(counter))

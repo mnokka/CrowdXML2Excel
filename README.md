@@ -12,6 +12,8 @@ Processses the backup file and creates two excels needed to import data to anoth
  In Crowd User import section:<br>
  Phase 1: Import users and groups csv files (creates users and groups)<br>
  Phase 2: Import Empty users and (normal) groups files (adds users to their groups)<br>
-
+<br>
+<br>
+Seems that creation of csv files (saving as) worked only (Crowd to accept files) when done in Linux using LibreOffice 
 
 
